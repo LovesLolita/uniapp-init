@@ -25,8 +25,16 @@ const _sfc_main = {
     };
     const testApi = async () => {
       try {
-        const res = await api_index.API.getList();
+        let params = {
+          id: 1
+        };
+        const res = await api_index.API.getList(params);
         console.log(res);
+        let query = {
+          id: 2
+        };
+        const res1 = await api_index.API.getLoveList(query);
+        console.log(res1);
       } catch (err) {
         console.log(err);
       }

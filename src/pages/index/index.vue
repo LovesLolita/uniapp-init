@@ -29,8 +29,16 @@ const handleCount = () => {
 // 测试发送请求
 const testApi = async() => {
   try {
-    const res = await API.getList()
+    let params = {
+      id:1
+    }
+    const res = await API.getList(params)
     console.log(res);
+    let query = {
+      id:2
+    }
+    const res1 =await API.getLoveList(query)
+    console.log(res1);
   } catch (err) {
     console.log(err);
   }
